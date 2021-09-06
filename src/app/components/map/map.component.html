@@ -1,0 +1,27 @@
+<div class="body">
+  <div class="title">Mapa</div>
+
+  <div class="wrapper">
+
+  <div class="maperro">
+    <div class="map-container">
+        <div class="map-frame">
+          <div id="map"></div>
+        </div>
+    </div>
+  </div>
+
+
+  <div class="addForm">
+    <h1 style="margin-bottom: 20px;">Dodaj nowy znacznik</h1>
+
+    <label for="markerTitle" >Tytuł:</label>
+      <input type='text' placeholder='tytuł' [(ngModel)]="title" class="form-control" style="width: 30%; margin-bottom: 20px;" id="markerTitle"> 
+
+      <label for="markerAddress">Ulica:</label>
+      <input type='text' placeholder='ulica' [(ngModel)]="address" class="form-control" style="width: 50%; margin-bottom: 50px;" id="markerAddress"> 
+
+      <button class="btn btn-primary btn-sm" (click)="addNewMarker();">Dodaj</button>
+
+  </div>
+</div>

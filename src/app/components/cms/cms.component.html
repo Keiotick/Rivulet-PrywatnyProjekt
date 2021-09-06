@@ -1,0 +1,35 @@
+<div class="body">
+    <div class="cms">
+        <h2 class="title">Tabela danych:</h2>
+        <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nazwa</th>
+            <th scope="col">Szerokość</th>
+            <th scope="col">Wysokość</th>
+            <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let marker of dataSource">
+            <th scope="row">{{ marker.id }}</th>
+            <td>{{ marker.title}}</td>
+            <td>{{ marker.lat}}</td>
+            <td>{{ marker.lon}}</td>
+            <td><button class="btn btn-secondary btn-sm" (click)="rmvMarker(marker.id)">Usuń</button></td>
+        </tr>
+        </tbody>
+        </table>
+
+        <div class="d-flex justify-content-between p-2">
+        <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize" (pageChange)="refreshCountries()">
+        </ngb-pagination>
+
+        <select class="custom-select" style="width: auto; height: 40px" [(ngModel)]="pageSize" (ngModelChange)="refreshCountries()">
+            <option [ngValue]="5">5 wpisów na stronę</option>
+            <option [ngValue]="10">10 wpisów na stronę</option>
+        </select>
+        </div>  
+    </div>
+</div>

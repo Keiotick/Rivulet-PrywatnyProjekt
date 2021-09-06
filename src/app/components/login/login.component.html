@@ -1,0 +1,47 @@
+<div class="body">
+<div class="container row">
+    <div class="col">
+        <div *ngIf="isLogin == true">
+            <h3>Jesteś zalogowany jako:</h3>
+            <h5><i>{{role}}</i></h5>
+        </div>
+
+
+            <div style="height: 250px">
+                <div class="loginForm" *ngIf="isLogin == false">
+                    <h4 style="margin-bottom: 20px;">Zaloguj się:</h4>
+                
+                    <!-- <label for="LoginInput" >Login:</label> -->
+                    <input type='text' placeholder='login' [(ngModel)]="login" class="form-control" style="width: 100%; margin-bottom: 10px;"  id="LoginInput"> 
+                
+                    <!-- <label for="PasswordInput">Hasło:</label> -->
+                    <input type='password' placeholder='hasło' [(ngModel)]="password" class="form-control" style="width: 100%; margin-bottom: 50px;" id="PasswordInput"> 
+                
+                    <button class="btn btn-primary btn-sm" (click)="checkUser();">Zaloguj</button>
+                </div>
+                <div *ngIf="isLogin == true">
+                    <button class="btn btn-primary btn-sm" (click)="logout();">Wyloguj</button>
+                </div>
+            </div>
+        <div>
+            <img src="https://i.imgur.com/5OcRev7.png">
+        </div>
+    </div>
+
+    <div class="col" style="background-image: linear-gradient(to bottom, rgb(90, 255, 164), rgb(123, 175, 0)); height: 500px;">
+        <h2 style="text-align: center;">Interfejs<br>Użytkownika</h2>
+        <div style="margin-top: 20%; justify-content: center; display: flex;">
+            <div *ngIf="role=='user'"><img src="https://forakyafrica-drilling.com/wp-content/uploads/2020/12/man-300x300-1.png"></div>
+            <div *ngIf="role!='user'"><i>Proszę zalogować się jako User</i></div>
+        </div>
+    </div>
+
+    <div class="col" style="background-image: linear-gradient(to bottom, rgb(255, 120, 120), rgb(255, 39, 39)); height: 500px;">
+        <h2 style="text-align: center;">Interfejs<br>Administratora</h2>
+        <div style="margin-top: 20%; justify-content: center; display: flex;">
+            <div *ngIf="role=='admin'"><img src="https://www.nicepng.com/png/full/230-2301501_secret-stamp-hidden-png-transparent-hiddenpng-images-top.png"></div>
+            <div *ngIf="role!='admin'"><i>Proszę zalogować się jako Admin</i></div>
+        </div>
+    </div>
+</div>
+</div>

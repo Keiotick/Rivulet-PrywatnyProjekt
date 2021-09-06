@@ -1,0 +1,19 @@
+.cms{
+    width: 70%;
+    justify-self: center;
+}
+.table{
+    background-color: white;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.body{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('src\app\assets\bg3.png');
+  }

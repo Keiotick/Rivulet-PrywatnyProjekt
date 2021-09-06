@@ -1,0 +1,35 @@
+ngb-carousel .wrapper {
+    padding-top: 55%; /* Keep ratio for 900x500 images */
+  }
+  ngb-carousel .wrapper>img {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+app-galeria .wrapper{
+    display: grid;
+}
+    .cont{
+    display: grid;
+    justify-content: center;
+    margin-top:100px;
+}
+  .skills{
+    width: 1000px;
+    height: 500px;
+}
+  .skillPicture{
+    width: 1000px;
+    height: 500px;
+}
+ .carousel-caption{
+     background-color: rgba(0,0,0,0.7);
+ }
+
+ .body{
+  width: 100vw;
+  height: 100vh;
+  background-image: url('src\app\assets\bg2.png');
+}

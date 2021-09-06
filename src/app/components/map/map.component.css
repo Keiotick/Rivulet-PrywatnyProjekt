@@ -1,0 +1,44 @@
+.map-container {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .map-frame {
+    border: 2px solid white;
+    height: 100%;
+  }
+  
+  #map {
+    height: 100%;
+    z-index: 1 !important;
+  }
+
+ .maperro{
+  display: flex;
+  justify-content: left;
+  text-align: right;
+ }
+
+ .wrapper {
+    margin-top: -15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
+    grid-template-rows: 85vh !important;
+  }
+  
+.title{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+.addForm{
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+.body{
+  width: 100vw;
+  height: 100vh;
+  background-image: url('src\app\assets\bg3.png');
+}
